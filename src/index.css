@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 222 40% 97%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 221 83% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 30% 94%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 25% 95%;
+    --muted-foreground: 220 15% 40%;
+
+    --accent: 14 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 160 70% 35%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 32 95% 50%;
+    --warning-foreground: 222 47% 11%;
+
+    --risk-low: 160 70% 35%;
+    --risk-medium: 32 95% 50%;
+    --risk-high: 0 75% 55%;
+    --risk-critical: 265 60% 45%;
+
+    --chart-primary: 221 83% 32%;
+    --chart-secondary: 190 75% 42%;
+    --chart-accent: 14 90% 55%;
+
+    /* Screening & Coverage - Teal/Cyan palette */
+    --screening-1: 190 75% 42%;
+    --screening-2: 175 65% 32%;
+    --screening-3: 168 60% 48%;
+
+    /* Risk Stratification */
+    --risk-bar: 265 60% 45%;
+    --risk-pie-alt: 330 65% 50%;
+
+    /* Referral & Action - Coral/Orange palette */
+    --referral-1: 18 90% 55%;
+    --referral-2: 10 80% 48%;
+    --referral-3: 30 95% 60%;
+    --referral-line: 5 70% 45%;
+
+    /* Workforce - Royal/Indigo palette */
+    --workforce-1: 235 65% 55%;
+    --workforce-2: 250 55% 45%;
+    --workforce-3: 220 70% 60%;
+
+    /* Longitudinal - Emerald palette */
+    --longitudinal-1: 155 70% 38%;
+    --longitudinal-2: 145 60% 32%;
+    --longitudinal-3: 170 65% 45%;
+
+    --border: 220 25% 88%;
+    --input: 220 25% 88%;
+    --ring: 221 83% 32%;
+
+    --radius: 0.75rem;
+
+    --card-shadow: 0 1px 3px 0 hsl(222 47% 11% / 0.05), 0 1px 2px -1px hsl(222 47% 11% / 0.05);
+    --card-shadow-hover: 0 10px 15px -3px hsl(222 47% 11% / 0.1), 0 4px 6px -4px hsl(222 47% 11% / 0.05);
+
+    --sidebar-background: 220 30% 96%;
+    --sidebar-foreground: 222 30% 20%;
+    --sidebar-primary: 222 47% 11%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 25% 92%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 20% 85%;
+    --sidebar-ring: 221 83% 50%;
+
+    --header-bg: 226 20% 40%;
+    --header-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 220 25% 96%;
+    --card: 222 40% 12%;
+    --card-foreground: 220 25% 96%;
+    --popover: 222 40% 12%;
+    --popover-foreground: 220 25% 96%;
+    --primary: 221 83% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 35% 18%;
+    --secondary-foreground: 220 25% 96%;
+    --muted: 222 35% 18%;
+    --muted-foreground: 220 15% 65%;
+    --accent: 14 90% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 65% 40%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 222 35% 22%;
+    --input: 222 35% 22%;
+    --ring: 221 83% 60%;
+    --header-bg: 222 47% 6%;
+    --header-foreground: 0 0% 100%;
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .kpi-value {
+    @apply text-2xl sm:text-3xl font-bold tracking-tight text-foreground;
+  }
+  .kpi-label {
+    @apply text-xs sm:text-sm text-muted-foreground font-medium;
+  }
+  .section-title {
+    @apply text-base sm:text-lg font-semibold text-foreground;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .glass-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
